@@ -21,36 +21,44 @@ html,body{
   font-size:25px;
   line-height:1;
   transform:translate(2px,2px);
-  filter:drop-shadow(0 0 6px #a8ffdc);
+  filter:drop-shadow(0 0 7px #eafff3);
 }
 
 /* MAIN THEME */
 #amateurs-theme{
+  position:relative;
+  isolation:isolate;
   box-sizing:border-box;
   width:100%;
   min-height:100vh;
   line-height:1.4;
-  background:linear-gradient(145deg,#10251d,#172c25,#0a1712);
-  color:#f2fff9;
+  background:
+    radial-gradient(ellipse at 10% 10%,#d5f8e4aa,transparent 42%),
+    radial-gradient(ellipse at 95% 35%,#18251f88,transparent 45%),
+    linear-gradient(145deg,#a9d9bb,#729c83,#263b30);
+  color:#ffffff;
   padding:15px;
-  border:1px solid #a8e8ce;
+  border:1px solid #e4fff0aa;
   border-radius:14px;
   font-family:Arial,sans-serif;
-  box-shadow:0 0 16px #8affc522;
+  box-shadow:
+    0 0 20px #baffd033,
+    inset 0 0 30px #ffffff12;
 }
 
-/* HOVER EFFECTS */
+/* GLASS HOVER EFFECTS */
 #amateurs-theme a[data-hover-button],
 #amateurs-theme button[data-hover-button]{
-  transition:all .22s ease;
+  transition:all .25s ease;
 }
 #amateurs-theme a[data-hover-button]:hover,
 #amateurs-theme button[data-hover-button]:hover{
   transform:translateY(-2px) scale(1.02);
-  filter:brightness(1.25);
-  box-shadow:0 0 16px #8affd0,
-             0 0 28px #8affd055;
-  border-color:#d9fff0!important;
+  filter:brightness(1.15);
+  box-shadow:
+    0 0 17px #eafff0aa,
+    0 0 30px #baffd066;
+  border-color:#ffffff!important;
 }
 #amateurs-theme a[data-hover-button]:active,
 #amateurs-theme button[data-hover-button]:active{
@@ -65,6 +73,7 @@ html,body{
   pointer-events:none;
   animation:amateursFall linear forwards;
   line-height:1;
+  filter:drop-shadow(0 0 5px #ffffffaa);
 }
 @keyframes amateursFall{
   0%{transform:translateY(-30px) rotate(0);opacity:0}
@@ -75,37 +84,51 @@ html,body{
 
 /* MEMBER COUNTER */
 #amateurs-theme .member-counter{
-  background:linear-gradient(145deg,#17382b,#10251d);
-  border:1px solid #a8e8ce;
+  background:linear-gradient(
+    145deg,
+    #ffffff35,
+    #d9ffea25
+  );
+  backdrop-filter:blur(13px);
+  -webkit-backdrop-filter:blur(13px);
+  border:1px solid #edfff0aa;
   border-radius:11px;
   padding:17px 12px;
   margin:12px 0;
   text-align:center;
+  box-shadow:
+    0 5px 18px #152c2022,
+    inset 0 1px 10px #ffffff22;
   transition:all .25s ease;
+}
+#amateurs-theme .member-counter:hover{
+  background:#ffffff40;
+  box-shadow:0 0 20px #eafff055;
 }
 #amateurs-theme .member-heading{
   font-size:10px;
   font-weight:bold;
   letter-spacing:4px;
-  color:#c3f7df;
+  color:#ffffff;
   margin-bottom:9px;
+  text-shadow:0 1px 5px #263b3055;
 }
 #amateurs-theme .member-number{
   font-size:38px;
   font-weight:900;
   line-height:1.15;
-  color:#eafff5;
-  text-shadow:0 0 12px #8affc5;
+  color:#ffffff;
+  text-shadow:0 0 13px #eafff0;
 }
 #amateurs-theme .member-caption{
   font-size:10px;
   letter-spacing:3px;
-  color:#b9e8d3;
+  color:#f1fff5;
   margin-top:7px;
 }
 #amateurs-theme .member-status{
   font-size:10px;
-  color:#a9d5c0;
+  color:#effff3;
   margin-top:9px;
 }
 #amateurs-theme .member-dot{
@@ -113,28 +136,42 @@ html,body{
   width:7px;
   height:7px;
   border-radius:50%;
-  background:#a8e8ce;
+  background:#dffff0;
   margin-right:5px;
+  box-shadow:0 0 7px #ffffff;
 }
 
 /* NEWEST MEMBERS */
 #amateurs-theme .new-members-box{
-  background:linear-gradient(145deg,#17382b,#10251d);
-  border:1px solid #a8e8ce;
+  background:linear-gradient(
+    145deg,
+    #ffffff35,
+    #d9ffea25
+  );
+  backdrop-filter:blur(13px);
+  -webkit-backdrop-filter:blur(13px);
+  border:1px solid #edfff0aa;
   border-radius:11px;
   padding:13px;
   margin:12px 0 15px;
+  box-shadow:
+    0 5px 18px #152c2022,
+    inset 0 1px 10px #ffffff22;
   transition:all .25s ease;
+}
+#amateurs-theme .new-members-box:hover{
+  background:#ffffff40;
 }
 #amateurs-theme .new-members-heading{
   text-align:center;
   font-size:12px;
   font-weight:900;
   letter-spacing:3px;
-  color:#eafff5;
+  color:#ffffff;
   padding:3px 0 11px;
   margin-bottom:11px;
-  border-bottom:1px solid #598b75;
+  border-bottom:1px solid #ffffff88;
+  text-shadow:0 1px 5px #263b3055;
 }
 #amateurs-theme .new-member-card{
   display:flex;
@@ -142,9 +179,11 @@ html,body{
   gap:11px;
   padding:9px;
   margin-bottom:8px;
-  background:#1d3b2e;
-  border:1px solid #527c68;
+  background:#ffffff26;
+  border:1px solid #eafff077;
   border-radius:8px;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
   transition:all .2s ease;
 }
 #amateurs-theme .new-member-card:last-child{
@@ -152,23 +191,25 @@ html,body{
 }
 #amateurs-theme .new-member-card:hover{
   transform:translateX(3px);
-  border-color:#caffeb;
-  background:#264b39;
+  border-color:#ffffff;
+  background:#ffffff45;
+  box-shadow:0 0 13px #eafff066;
 }
 #amateurs-theme .new-member-avatar{
   width:43px;
   height:43px;
   min-width:43px;
   border-radius:8px;
-  background:#294b3a;
-  border:1px solid #a8e8ce;
+  background:#d0f0dc;
+  border:1px solid #ffffff;
   overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:center;
   font-size:19px;
   font-weight:900;
-  color:#fff;
+  color:#263b30;
+  box-shadow:0 0 9px #ffffff55;
 }
 #amateurs-theme .new-member-avatar img{
   width:100%;
@@ -183,25 +224,26 @@ html,body{
 #amateurs-theme .new-member-name{
   font-size:12px;
   font-weight:900;
-  color:#eafff5;
+  color:#ffffff;
   overflow-wrap:anywhere;
+  text-shadow:0 1px 4px #263b3066;
 }
 #amateurs-theme .new-member-date{
   font-size:9px;
-  color:#b4d9c5;
+  color:#f0fff4;
   margin-top:3px;
   letter-spacing:1px;
 }
 #amateurs-theme .new-member-rank{
   font-size:9px;
-  color:#c6f5df;
+  color:#ffffff;
   letter-spacing:1px;
   white-space:nowrap;
 }
 #amateurs-theme .new-members-status{
   text-align:center;
   font-size:10px;
-  color:#b4d9c5;
+  color:#f0fff4;
   padding:10px 3px 3px;
 }
 #amateurs-theme .new-members-status:empty{
@@ -215,16 +257,26 @@ html,body{
   gap:15px;
   padding:13px;
   margin:14px 0;
-  background:linear-gradient(135deg,#17382b,#10251d);
-  border:1px solid #a8e8ce;
+  background:linear-gradient(
+    135deg,
+    #ffffff40,
+    #d9ffea25
+  );
+  backdrop-filter:blur(13px);
+  -webkit-backdrop-filter:blur(13px);
+  border:1px solid #edfff0aa;
   border-radius:11px;
+  box-shadow:
+    0 5px 18px #152c2022,
+    inset 0 1px 10px #ffffff22;
   transition:all .25s ease;
 }
 #amateurs-theme .amateur-profile:hover{
   transform:translateY(-2px);
-  box-shadow:0 0 16px #8affc5,
-             0 0 28px #8affc544;
-  border-color:#eafff5;
+  box-shadow:
+    0 0 17px #eafff0aa,
+    0 0 30px #baffd055;
+  border-color:#ffffff;
 }
 #amateurs-theme .amateur-avatar-wrap{
   width:65px;
@@ -232,18 +284,18 @@ html,body{
   min-width:65px;
   padding:3px;
   border-radius:12px;
-  background:#a8e8ce;
-  box-shadow:0 0 12px #8affc5;
+  background:linear-gradient(135deg,#ffffff,#b5e9ca);
+  box-shadow:0 0 13px #ffffff99;
   transition:.25s;
 }
 #amateurs-theme .amateur-profile:hover .amateur-avatar-wrap{
   transform:scale(1.07);
-  box-shadow:0 0 20px #8affc5;
+  box-shadow:0 0 21px #ffffff;
 }
 #amateurs-theme .amateur-avatar-inner{
   width:100%;
   height:100%;
-  background:#10251d;
+  background:#729b82;
   border-radius:9px;
   display:flex;
   align-items:center;
@@ -265,23 +317,24 @@ html,body{
 #amateurs-theme .amateur-role{
   font-size:9px;
   letter-spacing:3px;
-  color:#a8e8ce;
+  color:#ffffff;
   margin-bottom:5px;
 }
 #amateurs-theme .amateur-profile-name{
-  color:#effff7;
+  color:#ffffff;
   font-size:15px;
   font-weight:900;
   text-decoration:none;
   overflow-wrap:anywhere;
+  text-shadow:0 1px 5px #263b3055;
 }
 #amateurs-theme .amateur-profile-name:hover{
-  color:#a8e8ce;
+  color:#e0ffeb;
 }
 #amateurs-theme .amateur-profile-caption{
   font-size:9px;
   letter-spacing:2px;
-  color:#b4d9c5;
+  color:#effff4;
   margin-top:5px;
 }
 
@@ -289,6 +342,26 @@ html,body{
 #amateurs-theme .profile-name-link{
   color:inherit;
   text-decoration:none;
+}
+
+/* BUTTONS */
+#amateurs-theme button{
+  font-family:Arial,sans-serif;
+  cursor:none!important;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+/* FOOTER DIVIDER */
+#amateurs-theme .footer-divider{
+  height:1px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    #ffffffcc,
+    transparent
+  );
+  margin:6px 0 12px;
 }
 </style>
 
@@ -313,7 +386,7 @@ setTimeout(function(){item.remove()},7500);
 })();
 }
 "
-style="display:block;width:100%;background:#193c2c;color:#eafff5;border:1px solid #a8e8ce;border-radius:9px;padding:11px;margin-bottom:14px;font-size:20px;">
+style="display:block;width:100%;background:linear-gradient(135deg,#d2f3df,#719c83);color:#ffffff;border:1px solid #ffffff;border-radius:9px;padding:11px;margin-bottom:14px;font-size:20px;box-shadow:0 3px 12px #263b3022;">
 ♟️
 </button>
 
@@ -321,19 +394,23 @@ style="display:block;width:100%;background:#193c2c;color:#eafff5;border:1px soli
 <div style="
 text-align:center;
 padding:25px 8px;
-background:linear-gradient(135deg,#1e4835,#10271d,#1b3c2d);
-border:1px solid #a8e8ce;
+background:
+radial-gradient(ellipse at top,#ffffff35,transparent 70%),
+linear-gradient(135deg,#a9d9bbdd,#527c65dd,#293e33ee);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border:1px solid #edfff0cc;
 border-radius:11px;
 margin-bottom:14px;
-box-shadow:0 0 13px #8affc522;
+box-shadow:0 5px 18px #152c2033,inset 0 1px 12px #ffffff22;
 ">
-<div style="font-size:26px;font-weight:900;letter-spacing:3px;color:#effff7;text-shadow:0 0 12px #8affc5;">
+<div style="font-size:26px;font-weight:900;letter-spacing:3px;color:#ffffff;text-shadow:0 0 13px #eafff0;">
 ♟ THE AMATEURS ♟
 </div>
-<div style="font-size:10px;letter-spacing:5px;color:#c3f7df;margin-top:10px;">
+<div style="font-size:10px;letter-spacing:5px;color:#effff4;margin-top:10px;">
 C H E S S &nbsp; C L U B
 </div>
-<div style="font-size:10px;letter-spacing:3px;color:#b4d9c5;margin-top:12px;">
+<div style="font-size:10px;letter-spacing:3px;color:#e3ffeb;margin-top:12px;">
 PLAY &bull; LEARN &bull; IMPROVE
 </div>
 </div>
@@ -381,13 +458,13 @@ PLAY &bull; LEARN &bull; IMPROVE
 </div>
 
 <!-- FOOTER -->
-<div style="text-align:center;padding:12px;color:#d5f7e6;font-size:13px;font-style:italic;">
+<div style="text-align:center;padding:12px;color:#ffffff;font-size:13px;font-style:italic;text-shadow:0 1px 5px #263b3055;">
 "Every chess player starts somewhere."
 </div>
 
-<div style="height:1px;background:#a8e8ce;margin:6px 0 12px;"></div>
+<div class="footer-divider"></div>
 
-<div style="text-align:center;color:#b9e8d3;font-size:9px;letter-spacing:4px;">
+<div style="text-align:center;color:#f0fff4;font-size:9px;letter-spacing:4px;">
 T H E &nbsp; A M A T E U R S
 </div>
 
@@ -412,14 +489,15 @@ document.body.removeChild(temp);
 style="
 display:block;
 width:100%;
-background:#1b4532;
+background:linear-gradient(135deg,#a9d9bb,#527c65);
 color:#fff;
-border:1px solid #a8e8ce;
+border:1px solid #ffffff;
 border-radius:9px;
 padding:13px;
 margin-top:14px;
 font-weight:bold;
-letter-spacing:2px;">
+letter-spacing:2px;
+box-shadow:0 3px 12px #263b3033;">
 COPY CLUB LINK
 </button>
 
@@ -485,8 +563,8 @@ function loadMemberCount(){
     if(typeof club.members_count==='number'){
       count.textContent=club.members_count.toLocaleString();
       status.textContent='Club count loaded';
-      dot.style.background='#8affbd';
-      dot.style.boxShadow='0 0 8px #8affbd';
+      dot.style.background='#dffff0';
+      dot.style.boxShadow='0 0 8px #ffffff';
     }else{
       throw new Error('Member count unavailable');
     }
